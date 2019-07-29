@@ -19,7 +19,7 @@ results=firebase.get("/location_"+str(current_date),None)
 z=results.items()
 z.sort(key=lambda x: (x[1]['time']))
 
-#this template will draw a point
+#this template will draw a line
 template_line = \
     ''' \
     { "type" : "Feature",
@@ -30,7 +30,7 @@ template_line = \
         },
     '''        
 
-#this template will draw a line
+#this template will draw a point
 template_marker = \
     ''' \
     { "type" : "Feature",
